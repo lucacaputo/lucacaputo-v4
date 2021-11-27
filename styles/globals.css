@@ -20,4 +20,39 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  padding: 4rem 2rem;
+  position: relative;
+  border-radius: .3rem;
+  background-color: rgba(0,0,0,.7);
+  z-index: 2;
+  color: #fff;
+}
+.hero h1 span {
+  color: magenta;
+}
+.hero h1 {
+  margin-block-end: .5rem;
+}
+.hero h4 {
+  margin-block-start: 0;
+  font-weight: 200;
+}
+.btn {
+  padding: .4rem 1rem;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hero-btn {
+  font-size: 1.2rem;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: transparent;
 }

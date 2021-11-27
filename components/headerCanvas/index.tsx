@@ -32,7 +32,7 @@ const Canvas: React.FC = () => {
                 { x: rand(canvas.width, 0), y: rand(canvas.height, 0) },
                 rand(3, 10)
             ));
-            velocities.current = new Array(NUM_PARTICLES).fill(null).map(_ => [rand(1, .1, true), rand(1, .1, true)]);
+            velocities.current = new Array(NUM_PARTICLES).fill(null).map(_ => [rand(.5, .1, true), rand(.5, .1, true)]);
         }
 
         function drawMouseRange() {
@@ -128,12 +128,22 @@ const Canvas: React.FC = () => {
     }
 
     return (
-        <canvas 
-            style={{ background: 'var(--canvas-bg)', position: 'relative', zIndex: 1 }} 
-            ref={cnv} 
-            onMouseMove={updateMousePosition}
-            onMouseOut={resetMousePosition}
-        />
+        <>
+            <canvas
+                ref={cnv} 
+                onMouseMove={updateMousePosition}
+                onMouseOut={resetMousePosition}
+            />
+            <style jsx>{`
+                canvas {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background-color: var(--canvas-bg)
+                }
+            `}</style>
+        </>
     );
 }
 

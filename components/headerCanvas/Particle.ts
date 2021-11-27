@@ -14,7 +14,7 @@ export default class Particle {
         this.radius = radius;
         this.color = color;
         this.center = center;
-        this.maxRadius = radius * 3;
+        this.maxRadius = radius * 4;
         this.minRadius = radius;
     }
 
